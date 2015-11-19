@@ -1,12 +1,14 @@
-html
-    body(ng-app="animals")
-        div(ng-controller='pieChart', style='width:50%', align='center')
-            p Those are your favorite animals.
-            canvas#doughnut.chart.chart-pie(chart-data='data', chart-labels='labels')
-
-script(src='js/angular.min.js')
-script(src='js/socket.js')
-script(src='/socket.io/socket.io.js')
-script(src='js/Chart.min.js')
-script(src='js/angular-chart.min.js')
-script(src='js/animals.js')
+extend layout
+block content
+    div(ng-controller='pieChart', style='width:50%', align='center')
+        p What is your favorite animal ?
+        button(ng-click='catClick()')
+            | Cat
+        button(ng-click='dogClick()')
+            | Dog
+        button(ng-click='horseClick()')
+            | Horse
+        button(ng-click='otherClick()')
+            | Others
+        h2 Results
+        canvas#doughnut.chart.chart-pie(chart-data='data', chart-labels='labels')
