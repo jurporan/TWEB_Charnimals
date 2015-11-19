@@ -11,6 +11,5 @@ var io = require('socket.io')(server);
 
 io.on('connection', function(socket)
 {
-    console.log("Coucou");
     socket.emit('welcome', { message: 'welcome to charnimals' });
 });
