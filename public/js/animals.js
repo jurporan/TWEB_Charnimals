@@ -5,3 +5,5 @@ tweb.controller("barChart", function($scope)
     $scope.labels = ["Cats", "Dogs", "Horses", "Other"];
     $scope.data	= [867, 257, 145, 187];
 });
+
+var socket= io();
