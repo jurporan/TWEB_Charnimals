@@ -1,4 +1,4 @@
-var tweb = angular.module('animals', ["chart.js"]);
+var tweb = angular.module('animals', ["chart.js", "btford.socket-io"]);
 
 tweb.controller("pieChart", function($scope)
 {
